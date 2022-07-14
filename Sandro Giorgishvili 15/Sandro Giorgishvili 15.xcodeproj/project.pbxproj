@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B18ED9C288025570022CC68 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18ED9B288025570022CC68 /* GenreCell.swift */; };
+		3B18ED9F2880284B0022CC68 /* ViewController + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18ED9E2880284B0022CC68 /* ViewController + CollectionView.swift */; };
+		3B18EDA12880364D0022CC68 /* MovieCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18EDA02880364D0022CC68 /* MovieCells.swift */; };
+		3B18EDA528805B1D0022CC68 /* DetailsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18EDA428805B1D0022CC68 /* DetailsPageCell.swift */; };
 		3B78C240287DBFA300D43DED /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78C23E287DBFA300D43DED /* CustomCell.swift */; };
 		3B78C241287DBFA300D43DED /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78C23F287DBFA300D43DED /* CustomCell.xib */; };
+		3BCE6FDB288064E500B82F93 /* detailsPageVC + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE6FDA288064E500B82F93 /* detailsPageVC + CollectionView.swift */; };
 		3BD8E804287D3BCA00BB00D5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8E803287D3BCA00BB00D5 /* Models.swift */; };
 		3BD8E806287D3EBA00BB00D5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8E805287D3EBA00BB00D5 /* MovieCell.swift */; };
 		3BD8E810287D7E5200BB00D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD8E80E287D7E5200BB00D5 /* Main.storyboard */; };
@@ -21,8 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B18ED9B288025570022CC68 /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
+		3B18ED9E2880284B0022CC68 /* ViewController + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CollectionView.swift"; sourceTree = "<group>"; };
+		3B18EDA02880364D0022CC68 /* MovieCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCells.swift; sourceTree = "<group>"; };
+		3B18EDA428805B1D0022CC68 /* DetailsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageCell.swift; sourceTree = "<group>"; };
 		3B78C23E287DBFA300D43DED /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3B78C23F287DBFA300D43DED /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		3BCE6FDA288064E500B82F93 /* detailsPageVC + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "detailsPageVC + CollectionView.swift"; sourceTree = "<group>"; };
 		3BD8E803287D3BCA00BB00D5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3BD8E805287D3EBA00BB00D5 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		3BD8E80F287D7E5200BB00D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BCE6FDC2880A05E00B82F93 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BD8E811287D7EFE00BB00D5 /* DetailsPageVC.swift */,
+				3BD8EB59287CCB5700F0D383 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3BCE6FDD2880A09700B82F93 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3B18EDA428805B1D0022CC68 /* DetailsPageCell.swift */,
+				3BD8E805287D3EBA00BB00D5 /* MovieCell.swift */,
+				3B18ED9B288025570022CC68 /* GenreCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3BCE6FDE2880A0AC00B82F93 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B78C23E287DBFA300D43DED /* CustomCell.swift */,
+				3B78C23F287DBFA300D43DED /* CustomCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		3BD8EB49287CCB5700F0D383 = {
 			isa = PBXGroup;
 			children = (
@@ -68,16 +106,17 @@
 			children = (
 				3BD8EB55287CCB5700F0D383 /* AppDelegate.swift */,
 				3BD8EB57287CCB5700F0D383 /* SceneDelegate.swift */,
-				3BD8E811287D7EFE00BB00D5 /* DetailsPageVC.swift */,
-				3BD8EB59287CCB5700F0D383 /* ViewController.swift */,
+				3BCE6FDC2880A05E00B82F93 /* ViewControllers */,
 				3BD8E803287D3BCA00BB00D5 /* Models.swift */,
-				3BD8E805287D3EBA00BB00D5 /* MovieCell.swift */,
+				3BCE6FDD2880A09700B82F93 /* Cells */,
 				3BD8E80E287D7E5200BB00D5 /* Main.storyboard */,
 				3BD8EB5E287CCB5E00F0D383 /* Assets.xcassets */,
 				3BD8EB60287CCB5E00F0D383 /* LaunchScreen.storyboard */,
 				3BD8EB63287CCB5E00F0D383 /* Info.plist */,
-				3B78C23E287DBFA300D43DED /* CustomCell.swift */,
-				3B78C23F287DBFA300D43DED /* CustomCell.xib */,
+				3BCE6FDE2880A0AC00B82F93 /* CustomCell */,
+				3B18ED9E2880284B0022CC68 /* ViewController + CollectionView.swift */,
+				3B18EDA02880364D0022CC68 /* MovieCells.swift */,
+				3BCE6FDA288064E500B82F93 /* detailsPageVC + CollectionView.swift */,
 			);
 			path = "Sandro Giorgishvili 15";
 			sourceTree = "<group>";
@@ -155,8 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD8E812287D7EFE00BB00D5 /* DetailsPageVC.swift in Sources */,
+				3B18EDA528805B1D0022CC68 /* DetailsPageCell.swift in Sources */,
 				3BD8EB5A287CCB5700F0D383 /* ViewController.swift in Sources */,
+				3B18EDA12880364D0022CC68 /* MovieCells.swift in Sources */,
+				3B18ED9F2880284B0022CC68 /* ViewController + CollectionView.swift in Sources */,
+				3BCE6FDB288064E500B82F93 /* detailsPageVC + CollectionView.swift in Sources */,
 				3BD8EB56287CCB5700F0D383 /* AppDelegate.swift in Sources */,
+				3B18ED9C288025570022CC68 /* GenreCell.swift in Sources */,
 				3BD8EB58287CCB5700F0D383 /* SceneDelegate.swift in Sources */,
 				3BD8E806287D3EBA00BB00D5 /* MovieCell.swift in Sources */,
 				3B78C240287DBFA300D43DED /* CustomCell.swift in Sources */,
