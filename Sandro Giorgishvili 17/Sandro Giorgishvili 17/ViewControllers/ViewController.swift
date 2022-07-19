@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(changeBackgroundColor), name: Notification.Name("com.TBCLecture.Notification.colorChange"), object: nil)
         // Do any additional setup after loading the view
         redCircle.makeCircle()
         blueCircle.makeCircle()
@@ -23,6 +24,10 @@ class ViewController: UIViewController {
         blackTriangle.backgroundColor = .systemMint
         
         addTap()
+    }
+    
+    @objc func changeBackgroundColor() {
+        view.backgroundColor = .green
     }
     
     func pushToSecondView(fromView: FromWhichView) {
