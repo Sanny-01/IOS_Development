@@ -114,10 +114,11 @@ class SecondVC: UIViewController {
         
         let safeAreaHeight = view.safeAreaLayoutGuide.layoutFrame.size.height
         
-        if image.frame.height > safeAreaHeight {
+        if image.frame.height > safeAreaHeight{
             NotificationCenter.default.post(name: Notification.Name("com.TBCLecture.Notification.colorChange"), object: nil, userInfo: nil)
-            image.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-            image.center = self.view.center
+            //image.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+            self.image.transform = CGAffineTransform.identity
+           // image.center = self.view.center
         }
     }
 }
