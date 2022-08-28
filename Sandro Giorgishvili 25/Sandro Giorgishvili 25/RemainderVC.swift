@@ -27,8 +27,11 @@ class RemainderVC: UIViewController, AlertCellDelegate {
     
     var currentAlertName: String!
     var currentAlertTime: String!
-    
     var directory: String!
+    
+    let datePicker = UIDatePicker()
+    
+    let center = UNUserNotificationCenter.current()
     
     @IBOutlet weak var alertsTableView: UITableView!
     
@@ -36,6 +39,15 @@ class RemainderVC: UIViewController, AlertCellDelegate {
         super.viewDidLoad()
         
         setUpTableView()
+        askUserForPermission()
+    }
+    
+    func askUserForPermission() {
+        center.requestAuthorization(options: [.badge,.alert]) { granted, error in
+            if granted {
+                print("თანახმაა ნოთიფიქეიშენზე")
+            }
+        }
     }
     
     func setUpTableView() {
@@ -93,6 +105,8 @@ class RemainderVC: UIViewController, AlertCellDelegate {
                     
                     createFileForDirectory(directoryName: directory, FileName: alertName + ".txt",alertTime: alertTime)
                     
+                    addContentToNotification(date: datePicker.date)
+                    
                     alertsTableView.reloadData()
                 }
             } else {
@@ -139,6 +153,9 @@ class RemainderVC: UIViewController, AlertCellDelegate {
                     showAlertWithOkButton(title: nil, message: "There already exists alert with that name")
                 } else {
                     
+                    deleteNotificationRequest(id: ViewController.alerts[index])
+                    addContentToNotification(date: datePicker.date)
+                    
                     ViewController.alerts.remove(at: index)
                     ViewController.alertDate.remove(at: index)
                     ViewController.alerts.append(alertName)
@@ -159,31 +176,54 @@ class RemainderVC: UIViewController, AlertCellDelegate {
         
         present(ac, animated: true)
     }
-
-func setUpDatePicker() {
-    let datePicker = UIDatePicker()
-    datePicker.datePickerMode = .dateAndTime
-    datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
-    datePicker.frame.size = CGSize(width: 0, height: 300)
-    datePicker.preferredDatePickerStyle = .wheels
-    datePicker.minimumDate = Date()
-    ac.textFields![1].inputView = datePicker
     
-    ac.textFields![1].text = formatDate(date: Date())
+    func setUpDatePicker() {
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
+        datePicker.frame.size = CGSize(width: 0, height: 300)
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minimumDate = Date()
+        ac.textFields![1].inputView = datePicker
+        
+        ac.textFields![1].text = formatDate(date: Date())
+    }
+    
+    @objc func dateChange(datePicker: UIDatePicker)
+    {
+        ac.textFields![1].text = formatDate(date: datePicker.date)
+    }
+    
+    func formatDate(date: Date) -> String
+    {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd HH:mm"
+        return formatter.string(from: date)
+    }
+    
+    func addContentToNotification(date: Date) {
+        let content = UNMutableNotificationContent()
+        
+        content.title = currentAlertName
+        
+        let dateComp = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: currentAlertName, content: content, trigger: trigger)
+        
+        center.add(request) { (error) in
+            if error == nil {
+                     print("Added successfully")
+            }
+        }
+    }
+    
+    func deleteNotificationRequest(id: String) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
+    }
 }
 
-@objc func dateChange(datePicker: UIDatePicker)
-{
-    ac.textFields![1].text = formatDate(date: datePicker.date)
-}
 
-func formatDate(date: Date) -> String
-{
-    let formatter = DateFormatter()
-    formatter.dateFormat = "MMMM dd HH:mm"
-    return formatter.string(from: date)
-}
-}
 
 
 extension RemainderVC: UITableViewDelegate, UITableViewDataSource {
