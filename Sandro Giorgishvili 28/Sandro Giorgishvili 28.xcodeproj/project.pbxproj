@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B3F2D0E28BE8E3F00A208FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D0D28BE8E3F00A208FB /* AppDelegate.swift */; };
+		3B3F2D1028BE8E3F00A208FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D0F28BE8E3F00A208FB /* SceneDelegate.swift */; };
+		3B3F2D1228BE8E3F00A208FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D1128BE8E3F00A208FB /* ViewController.swift */; };
+		3B3F2D1728BE8E4500A208FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F2D1628BE8E4500A208FB /* Assets.xcassets */; };
+		3B3F2D1A28BE8E4500A208FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F2D1828BE8E4500A208FB /* LaunchScreen.storyboard */; };
+		3B3F2D3528BE910C00A208FB /* CountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D2F28BE910C00A208FB /* CountriesPresenter.swift */; };
+		3B3F2D3628BE910C00A208FB /* CountriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3028BE910C00A208FB /* CountriesWorker.swift */; };
+		3B3F2D3728BE910C00A208FB /* CountriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3128BE910C00A208FB /* CountriesRouter.swift */; };
+		3B3F2D3828BE910C00A208FB /* CountriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3228BE910C00A208FB /* CountriesModels.swift */; };
+		3B3F2D3928BE910C00A208FB /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3328BE910C00A208FB /* CountriesViewController.swift */; };
+		3B3F2D3A28BE910C00A208FB /* CountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3428BE910C00A208FB /* CountriesInteractor.swift */; };
+		3B3F2D3C28BE911C00A208FB /* CountriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3B28BE911C00A208FB /* CountriesConfigurator.swift */; };
+		3B3F2D3F28BE918F00A208FB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D3E28BE918F00A208FB /* APIManager.swift */; };
+		3B3F2D4128BE91A500A208FB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D4028BE91A500A208FB /* APIError.swift */; };
+		3B3F2D4428BE96B600A208FB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D4328BE96B600A208FB /* Country.swift */; };
+		3B3F2D4928BE9E7600A208FB /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D4828BE9E7600A208FB /* AbstractModel.swift */; };
+		3B3F2D4B28BE9E9E00A208FB /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D4A28BE9E9E00A208FB /* CountryCell.swift */; };
+		3B3F2D4E28BEA04900A208FB /* CountryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F2D4D28BEA04900A208FB /* CountryCellModel.swift */; };
+		3B474F5528C1522400FF7871 /* CountryWeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F4F28C1522400FF7871 /* CountryWeatherPresenter.swift */; };
+		3B474F5628C1522400FF7871 /* CountryWeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5028C1522400FF7871 /* CountryWeatherWorker.swift */; };
+		3B474F5728C1522400FF7871 /* CountryWeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5128C1522400FF7871 /* CountryWeatherRouter.swift */; };
+		3B474F5828C1522400FF7871 /* CountryWeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5228C1522400FF7871 /* CountryWeatherModels.swift */; };
+		3B474F5928C1522400FF7871 /* CountryWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5328C1522400FF7871 /* CountryWeatherViewController.swift */; };
+		3B474F5A28C1522400FF7871 /* CountryWeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5428C1522400FF7871 /* CountryWeatherInteractor.swift */; };
+		3B474F5C28C1524500FF7871 /* CountryWeatherConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B474F5B28C1524500FF7871 /* CountryWeatherConfigurator.swift */; };
+		3BC4167628BFC3E50088377F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4167528BFC3E50088377F /* UIView + Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B3F2D0A28BE8E3F00A208FB /* Sandro Giorgishvili 28.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sandro Giorgishvili 28.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3F2D0D28BE8E3F00A208FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B3F2D0F28BE8E3F00A208FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3B3F2D1128BE8E3F00A208FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B3F2D1628BE8E4500A208FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B3F2D1928BE8E4500A208FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B3F2D1B28BE8E4500A208FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3F2D2F28BE910C00A208FB /* CountriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPresenter.swift; sourceTree = "<group>"; };
+		3B3F2D3028BE910C00A208FB /* CountriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesWorker.swift; sourceTree = "<group>"; };
+		3B3F2D3128BE910C00A208FB /* CountriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRouter.swift; sourceTree = "<group>"; };
+		3B3F2D3228BE910C00A208FB /* CountriesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModels.swift; sourceTree = "<group>"; };
+		3B3F2D3328BE910C00A208FB /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		3B3F2D3428BE910C00A208FB /* CountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesInteractor.swift; sourceTree = "<group>"; };
+		3B3F2D3B28BE911C00A208FB /* CountriesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesConfigurator.swift; sourceTree = "<group>"; };
+		3B3F2D3E28BE918F00A208FB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3B3F2D4028BE91A500A208FB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		3B3F2D4328BE96B600A208FB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3B3F2D4828BE9E7600A208FB /* AbstractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
+		3B3F2D4A28BE9E9E00A208FB /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		3B3F2D4D28BEA04900A208FB /* CountryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellModel.swift; sourceTree = "<group>"; };
+		3B474F4F28C1522400FF7871 /* CountryWeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherPresenter.swift; sourceTree = "<group>"; };
+		3B474F5028C1522400FF7871 /* CountryWeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherWorker.swift; sourceTree = "<group>"; };
+		3B474F5128C1522400FF7871 /* CountryWeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherRouter.swift; sourceTree = "<group>"; };
+		3B474F5228C1522400FF7871 /* CountryWeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherModels.swift; sourceTree = "<group>"; };
+		3B474F5328C1522400FF7871 /* CountryWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherViewController.swift; sourceTree = "<group>"; };
+		3B474F5428C1522400FF7871 /* CountryWeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherInteractor.swift; sourceTree = "<group>"; };
+		3B474F5B28C1524500FF7871 /* CountryWeatherConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWeatherConfigurator.swift; sourceTree = "<group>"; };
+		3BC4167528BFC3E50088377F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B3F2D0728BE8E3F00A208FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B3F2D0128BE8E3F00A208FB = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D0C28BE8E3F00A208FB /* Sandro Giorgishvili 28 */,
+				3B3F2D0B28BE8E3F00A208FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B3F2D0B28BE8E3F00A208FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D0A28BE8E3F00A208FB /* Sandro Giorgishvili 28.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B3F2D0C28BE8E3F00A208FB /* Sandro Giorgishvili 28 */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4167428BFC3C30088377F /* Utilities */,
+				3B3F2D4528BE9E4C00A208FB /* Cell */,
+				3B3F2D4228BE96AD00A208FB /* Model */,
+				3B3F2D3D28BE918600A208FB /* API */,
+				3B3F2D2228BE90B500A208FB /* Scenes */,
+				3B3F2D0D28BE8E3F00A208FB /* AppDelegate.swift */,
+				3B3F2D0F28BE8E3F00A208FB /* SceneDelegate.swift */,
+				3B3F2D1128BE8E3F00A208FB /* ViewController.swift */,
+				3B3F2D1628BE8E4500A208FB /* Assets.xcassets */,
+				3B3F2D1828BE8E4500A208FB /* LaunchScreen.storyboard */,
+				3B3F2D1B28BE8E4500A208FB /* Info.plist */,
+			);
+			path = "Sandro Giorgishvili 28";
+			sourceTree = "<group>";
+		};
+		3B3F2D2128BE908D00A208FB /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D3B28BE911C00A208FB /* CountriesConfigurator.swift */,
+				3B3F2D3328BE910C00A208FB /* CountriesViewController.swift */,
+				3B3F2D2F28BE910C00A208FB /* CountriesPresenter.swift */,
+				3B3F2D3028BE910C00A208FB /* CountriesWorker.swift */,
+				3B3F2D3128BE910C00A208FB /* CountriesRouter.swift */,
+				3B3F2D3228BE910C00A208FB /* CountriesModels.swift */,
+				3B3F2D3428BE910C00A208FB /* CountriesInteractor.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		3B3F2D2228BE90B500A208FB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3B474F4E28C1520400FF7871 /* CountryWeather */,
+				3B3F2D2128BE908D00A208FB /* Countries */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3B3F2D3D28BE918600A208FB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D3E28BE918F00A208FB /* APIManager.swift */,
+				3B3F2D4028BE91A500A208FB /* APIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3B3F2D4228BE96AD00A208FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D4328BE96B600A208FB /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B3F2D4528BE9E4C00A208FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D4C28BE9EA300A208FB /* CoyntryCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3B3F2D4C28BE9EA300A208FB /* CoyntryCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F2D4828BE9E7600A208FB /* AbstractModel.swift */,
+				3B3F2D4A28BE9E9E00A208FB /* CountryCell.swift */,
+				3B3F2D4D28BEA04900A208FB /* CountryCellModel.swift */,
+			);
+			path = CoyntryCell;
+			sourceTree = "<group>";
+		};
+		3B474F4E28C1520400FF7871 /* CountryWeather */ = {
+			isa = PBXGroup;
+			children = (
+				3B474F5B28C1524500FF7871 /* CountryWeatherConfigurator.swift */,
+				3B474F5328C1522400FF7871 /* CountryWeatherViewController.swift */,
+				3B474F4F28C1522400FF7871 /* CountryWeatherPresenter.swift */,
+				3B474F5028C1522400FF7871 /* CountryWeatherWorker.swift */,
+				3B474F5128C1522400FF7871 /* CountryWeatherRouter.swift */,
+				3B474F5228C1522400FF7871 /* CountryWeatherModels.swift */,
+				3B474F5428C1522400FF7871 /* CountryWeatherInteractor.swift */,
+			);
+			path = CountryWeather;
+			sourceTree = "<group>";
+		};
+		3BC4167428BFC3C30088377F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4167528BFC3E50088377F /* UIView + Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B3F2D0928BE8E3F00A208FB /* Sandro Giorgishvili 28 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B3F2D1E28BE8E4500A208FB /* Build configuration list for PBXNativeTarget "Sandro Giorgishvili 28" */;
+			buildPhases = (
+				3B3F2D0628BE8E3F00A208FB /* Sources */,
+				3B3F2D0728BE8E3F00A208FB /* Frameworks */,
+				3B3F2D0828BE8E3F00A208FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sandro Giorgishvili 28";
+			productName = "Sandro Giorgishvili 28";
+			productReference = 3B3F2D0A28BE8E3F00A208FB /* Sandro Giorgishvili 28.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B3F2D0228BE8E3F00A208FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3B3F2D0928BE8E3F00A208FB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3B3F2D0528BE8E3F00A208FB /* Build configuration list for PBXProject "Sandro Giorgishvili 28" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B3F2D0128BE8E3F00A208FB;
+			productRefGroup = 3B3F2D0B28BE8E3F00A208FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B3F2D0928BE8E3F00A208FB /* Sandro Giorgishvili 28 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B3F2D0828BE8E3F00A208FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3F2D1A28BE8E4500A208FB /* LaunchScreen.storyboard in Resources */,
+				3B3F2D1728BE8E4500A208FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B3F2D0628BE8E3F00A208FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3F2D1228BE8E3F00A208FB /* ViewController.swift in Sources */,
+				3B3F2D0E28BE8E3F00A208FB /* AppDelegate.swift in Sources */,
+				3B3F2D4B28BE9E9E00A208FB /* CountryCell.swift in Sources */,
+				3B474F5628C1522400FF7871 /* CountryWeatherWorker.swift in Sources */,
+				3B474F5728C1522400FF7871 /* CountryWeatherRouter.swift in Sources */,
+				3B3F2D1028BE8E3F00A208FB /* SceneDelegate.swift in Sources */,
+				3B474F5A28C1522400FF7871 /* CountryWeatherInteractor.swift in Sources */,
+				3B3F2D3928BE910C00A208FB /* CountriesViewController.swift in Sources */,
+				3B474F5928C1522400FF7871 /* CountryWeatherViewController.swift in Sources */,
+				3B3F2D4428BE96B600A208FB /* Country.swift in Sources */,
+				3B3F2D4E28BEA04900A208FB /* CountryCellModel.swift in Sources */,
+				3B3F2D3F28BE918F00A208FB /* APIManager.swift in Sources */,
+				3BC4167628BFC3E50088377F /* UIView + Extension.swift in Sources */,
+				3B3F2D4128BE91A500A208FB /* APIError.swift in Sources */,
+				3B3F2D3728BE910C00A208FB /* CountriesRouter.swift in Sources */,
+				3B474F5C28C1524500FF7871 /* CountryWeatherConfigurator.swift in Sources */,
+				3B3F2D3628BE910C00A208FB /* CountriesWorker.swift in Sources */,
+				3B3F2D3A28BE910C00A208FB /* CountriesInteractor.swift in Sources */,
+				3B3F2D3C28BE911C00A208FB /* CountriesConfigurator.swift in Sources */,
+				3B474F5828C1522400FF7871 /* CountryWeatherModels.swift in Sources */,
+				3B474F5528C1522400FF7871 /* CountryWeatherPresenter.swift in Sources */,
+				3B3F2D4928BE9E7600A208FB /* AbstractModel.swift in Sources */,
+				3B3F2D3528BE910C00A208FB /* CountriesPresenter.swift in Sources */,
+				3B3F2D3828BE910C00A208FB /* CountriesModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B3F2D1828BE8E4500A208FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3F2D1928BE8E4500A208FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B3F2D1C28BE8E4500A208FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B3F2D1D28BE8E4500A208FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B3F2D1F28BE8E4500A208FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sandro Giorgishvili 28/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TBCLectures.Sandro-Giorgishvili-28";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B3F2D2028BE8E4500A208FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sandro Giorgishvili 28/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TBCLectures.Sandro-Giorgishvili-28";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B3F2D0528BE8E3F00A208FB /* Build configuration list for PBXProject "Sandro Giorgishvili 28" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B3F2D1C28BE8E4500A208FB /* Debug */,
+				3B3F2D1D28BE8E4500A208FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B3F2D1E28BE8E4500A208FB /* Build configuration list for PBXNativeTarget "Sandro Giorgishvili 28" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B3F2D1F28BE8E4500A208FB /* Debug */,
+				3B3F2D2028BE8E4500A208FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B3F2D0228BE8E3F00A208FB /* Project object */;
+}
